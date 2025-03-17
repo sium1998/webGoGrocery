@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Fruits - Grocery Store</title>
+    <!-- Link to External CSS -->
+    <link href="style.css" rel="stylesheet"/>
+    <!-- Font Awesome for Icons (Optional) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+<header>
+    <div class="header-container">
+        <div class="logo">
+            <a href="index.html">
+                <img alt="Grocery Store Logo" src="logo.png"/>
+            </a>
+        </div>
+        <div class="search-bar">
+            <input aria-label="Search for products" placeholder="Search for products..." type="text"/>
+            <button aria-label="Search" class="search-button">
+                <img alt="Search Icon" src="search.png"/>
+            </button>
+        </div>
+        <div class="account-options">
+            <div aria-label="My Account" class="account" tabindex="0">
+                <a href="account.php">
+                    <img alt="My Account Icon" class="header-icon" src="account.png"/>
+                    <span>My Account</span>
+                </a>
+            </div>
+            <div aria-label="Shopping Cart" class="cart" tabindex="0">
+                <a href="cart.html">
+                    <img alt="Cart Icon" class="header-icon" src="cart.png"/>
+                    <span>৳ 0.00</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <nav>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#about-us">About Us</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact Us</a>
+        </div>
+    </nav>
+</header>
+
+<main>
+
+    <!-- Category Section -->
+    <div class="category-section">
+        <div class="category-header">
+            <img alt="Fruit Basket" src="fruits.jpg"/>
+            <h2>Fruits</h2>
+        </div>
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-item">
+                <img alt="Apple" src="apple.jpg"/>
+                <h3>Apple - 1 kg</h3>
+                <div class="price">120.00৳</div>
+                <input aria-label="Quantity" min="1" type="number" value="1"/>
+                <button class="add-to-cart" data-name="Apple - 1 kg" data-price="120.00">Add to Cart</button>
+            </div>
+            <!-- Product 2 -->
+            <div class="product-item">
+                <img alt="Banana" src="banana.jpg"/>
+                <h3>Banana - 12 pcs</h3>
+                <div class="price">150.00৳</div>
+                <input aria-label="Quantity" min="1" type="number" value="1"/>
+                <button class="add-to-cart" data-name="Banana - 12 pcs" data-price="150.00">Add to Cart</button>
+            </div>
+            <!-- Product 3 -->
+            <div class="product-item">
+                <img alt="Orange" src="orange.jpg"/>
+                <h3>Orange - 1 kg</h3>
+                <div class="price">100.00৳</div>
+                <input aria-label="Quantity" min="1" type="number" value="1"/>
+                <button class="add-to-cart" data-name="Orange - 1 kg" data-price="100.00">Add to Cart</button>
+            </div>
+            <!-- Product 4 -->
+            <div class="product-item">
+                <img alt="Mango" src="mango.jpg"/>
+                <h3>Mango - 1 kg</h3>
+                <div class="price">200.00৳</div>
+                <input aria-label="Quantity" min="1" type="number" value="1"/>
+                <button class="add-to-cart" data-name="Mango - 1 kg" data-price="200.00">Add to Cart</button>
+            </div>
+            <!-- Product 5 -->
+            <div class="product-item">
+                <img alt="Pineapple" src="pineapple.jpg"/>
+                <h3>Pineapple - 1 pc</h3>
+                <div class="price">180.00৳</div>
+                <input aria-label="Quantity" min="1" type="number" value="1"/>
+                <button class="add-to-cart" data-name="Pineapple - 1 pc" data-price="180.00">Add to Cart</button>
+            </div>
+            <!-- Product 6 -->
+            <div class="product-item">
+                <img alt="Grapes" src="grapes.jpg"/>
+                <h3>Grapes - 500 gm</h3>
+                <div class="price">90.00৳</div>
+                <input aria-label="Quantity" min="1" type="number" value="1"/>
+                <button class="add-to-cart" data-name="Grapes - 500 gm" data-price="90.00">Add to Cart</button>
+            </div>
+            <!-- Product 7 -->
+            <div class="product-item">
+                <img alt="Pear" src="pear.jpg"/>
+                <h3>Pear - 1 kg</h3>
+                <div class="price">110.00৳</div>
+                <input aria-label="Quantity" min="1" type="number" value="1"/>
+                <button class="add-to-cart" data-name="Pear - 1 kg" data-price="110.00">Add to Cart</button>
+            </div>
+            <!-- Product 8 -->
+            <div class="product-item">
+                <img alt="Kiwi" src="kiwi.jpg"/>
+                <h3>Kiwi - 500 gm</h3>
+                <div class="price">130.00৳</div>
+                <input aria-label="Quantity" min="1" type="number" value="1"/>
+                <button class="add-to-cart" data-name="Kiwi - 500 gm" data-price="130.00">Add to Cart</button>
+            </div>
+            <!-- Product 9 -->
+            <div class="product-item">
+                <img alt="Strawberry" src="strawberry.jpg"/>
+                <h3>Strawberry - 250 gm</h3>
+                <div class="price">160.00৳</div>
+                <input aria-label="Quantity" min="1" type="number" value="1"/>
+                <button class="add-to-cart" data-name="Strawberry - 250 gm" data-price="160.00">Add to Cart</button>
+            </div>
+            <!-- Product 10 -->
+            <div class="product-item">
+                <img alt="Blueberry" src="blueberry.jpg"/>
+                <h3>Blueberry - 200 gm</h3>
+                <div class="price">200.00৳</div>
+                <input aria-label="Quantity" min="1" type="number" value="1"/>
+                <button class="add-to-cart" data-name="Blueberry - 200 gm" data-price="200.00">Add to Cart</button>
+            </div>
+            <!-- Product 11 -->
+            <div class="product-item">
+                <img alt="Pomegranate" src="pomegranate.jpg"/>
+                <h3>Pomegranate - 1 kg</h3>
+                <div class="price">150.00৳</div>
+                <input aria-label="Quantity" min="1" type="number" value="1"/>
+                <button class="add-to-cart" data-name="Pomegranate - 1 kg" data-price="150.00">Add to Cart</button>
+            </div>
+            <!-- Product 12 -->
+            <div class="product-item">
+                <img alt="Peach" src="peach.jpg"/>
+                <h3>Peach - 500 gm</h3>
+                <div class="price">170.00৳</div>
+                <input aria-label="Quantity" min="1" type="number" value="1"/>
+                <button class="add-to-cart" data-name="Peach - 500 gm" data-price="170.00">Add to Cart</button>
+            </div>
+            <!-- Product 13 -->
+            <div class="product-item">
+                <img alt="Dragon Fruit" src="dragon-fruit.jpg"/>
+                <h3>Dragon Fruit - 1 pc</h3>
+                <div class="price">220.00৳</div>
+                <input aria-label="Quantity" min="1" type="number" value="1"/>
+                <button class="add-to-cart" data-name="Dragon Fruit - 1 pc" data-price="220.00">Add to Cart</button>
+            </div>
+            <!-- Product 14 -->
+            <div class="product-item">
+                <img alt="Cantaloupe" src="cantaloupe.jpg"/>
+                <h3>Cantaloupe - 1 pc</h3>
+                <div class="price">140.00৳</div>
+                <input aria-label="Quantity" min="1" type="number" value="1"/>
+                <button class="add-to-cart" data-name="Cantaloupe - 1 pc" data-price="140.00">Add to Cart</button>
+            </div>
+            <!-- Product 15 -->
+            <div class="product-item">
+                <img alt="Melon" src="melon.jpg"/>
+                <h3>Melon - 1 pc</h3>
+                <div class="price">130.00৳</div>
+                <input aria-label="Quantity" min="1" type="number" value="1"/>
+                <button class="add-to-cart" data-name="Melon - 1 pc" data-price="130.00">Add to Cart</button>
+            </div>
+            <!-- Product 16 -->
+            <div class="product-item">
+                <img alt="Coconut" src="coconut.jpg"/>
+                <h3>Coconut - 2 pcs</h3>
+                <div class="price">100.00৳</div>
+                <input aria-label="Quantity" min="1" type="number" value="2"/>
+                <button class="add-to-cart" data-name="Coconut - 2 pcs" data-price="100.00">Add to Cart</button>
+            </div>
+            <!-- Product 17 -->
+            <div class="product-item">
+                <img alt="Fig" src="fig.jpg"/>
+                <h3>Fig - 250 gm</h3>
+                <div class="price">180.00৳</div>
+                <input aria-label="Quantity" min="1" type="number" value="1"/>
+                <button class="add-to-cart" data-name="Fig - 250 gm" data-price="180.00">Add to Cart</button>
+            </div>
+            <!-- Product 18 -->
+            <div class="product-item">
+                <img alt="Guava" src="guava.jpg"/>
+                <h3>Guava - 1 kg</h3>
+                <div class="price">90.00৳</div>
+                <input aria-label="Quantity" min="1" type="number" value="1"/>
+                <button class="add-to-cart" data-name="Guava - 1 kg" data-price="90.00">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- See All Products Button -->
+        <div class="see-all-container">
+            <a class="see-all-button" href="fruits.html">See All Products</a>
+        </div>
+    </div>
+
+    <!-- Back to Categories Button -->
+    <div class="back-to-categories">
+        <a class="back-button" href="index.html#categories">← Back to Categories</a>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer>
+    <p>© TatKa by Hadika Henna.</p>
+</footer>
+
+<!-- Link to External JavaScript -->
+<script src="script.js"></script>
+<script src="addcart.js"></script>
+
+</body>
+</html>

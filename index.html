@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Store</title>
+    <!-- Link to External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo.png" alt="Grocery Store Logo">
+                </a>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for products..." aria-label="Search for products">
+                <button class="search-button" aria-label="Search">
+                    <img src="search.png" alt="Search Icon">
+                </button>
+                
+            </div>
+
+            <div class="account-options">
+                <!-- My Account Link -->
+                <div class="account" tabindex="0" aria-label="My Account">
+                    <a href="account.html">
+                        <img src="account.png" alt="My Account Icon" class="header-icon">
+                        <span>My Account</span>
+                    </a>
+                </div>
+                
+                <!-- Cart Link -->
+                <div class="cart" tabindex="0" aria-label="Shopping Cart">
+                    <a href="cart.html">
+                        <img src="cart.png" alt="Cart Icon" class="header-icon">
+                        <span>৳ 0.00</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="#about-us">About Us</a>
+                <a href="#services">Services</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contact Us</a>
+               
+             
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- Hero Section -->
+<section class="hero">
+    <div class="hero-image-container">
+        <img src="back.jpg" alt="High-Quality Products" class="hero-image">
+        <div class="hero-text">
+            <h1>Welcome to Our Grocery Store</h1>
+            <p>Your one-stop shop for fresh and quality products.</p>
+        </div>
+    </div>
+</section>
+>
+
+        <!-- Categories Section -->
+<section id="categories" class="categories">
+    <h2>Our Categories</h2>
+    <div class="category-grid">
+        <a href="vegetables.html" class="category-item">
+            <img src="vegetables.jpg" alt="Vegetables">
+            <h3>Vegetables</h3>
+        </a>
+        <a href="fruits.html" class="category-item">
+            <img src="fruit.jpg" alt="Fruits">
+            <h3>Fruits</h3>
+        </a>
+        <a href="fish.html" class="category-item">
+            <img src="fish.jpg" alt="Fish">
+            <h3>Fish</h3>
+        </a>
+        <a href="meat.html" class="category-item">
+            <img src="meat.jpg" alt="Meat">
+            <h3>Meat</h3>
+        </a>
+    </div>
+</section>
+
+
+        <!-- Individual Category Sections -->
+        <!-- Vegetables Section -->
+        <div class="category-section">
+            <div class="category-header">
+                <div>
+                    <img src="vegetables.jpg" alt="Vegetable Basket">
+                    <h2>Vegetables</h2>
+                </div>
+                <a href="vegetables.html" class="view-more">View More</a>
+            </div>
+            <div class="product-grid">
+                <div class="product-item">
+                    <img src="ladys-finger.jpg" alt="Lady's Finger">
+                    <h3>Lady's Finger - 500 gm</h3>
+                    <div class="price">60.00৳</div>
+                    <input type="number" value="1" min="1">
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="green-chili.jpg" alt="Green Chili">
+                    <h3>Green Chili - 250 gm</h3>
+                    <div class="price">35.00৳</div>
+                    <input type="number" value="1" min="1">
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fruits Section -->
+        <div class="category-section">
+            <div class="category-header">
+                <div>
+                    <img src="fruits.jpg" alt="Fruit Basket">
+                    <h2>Fruits</h2>
+                </div>
+                <a href="fruits.html" class="view-more">View More</a>
+            </div>
+            <div class="product-grid">
+                <div class="product-item">
+                    <img src="apple.jpg" alt="Apple">
+                    <h3>Apple - 1 kg</h3>
+                    <div class="price">120.00৳</div>
+                    <input type="number" value="1" min="1">
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="banana.jpg" alt="Banana">
+                    <h3>Banana - 12 pcs</h3>
+                    <div class="price">150.00৳</div>
+                    <input type="number" value="1" min="1">
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fish Section -->
+        <div class="category-section">
+            <div class="category-header">
+                <div>
+                    <img src="fish.jpg" alt="Fish Basket">
+                    <h2>Fish</h2>
+                </div>
+                <a href="fish.html" class="view-more">View More</a>
+            </div>
+            <div class="product-grid">
+                <div class="product-item">
+                    <img src="hilsa.jpg" alt="Hilsa">
+                    <h3>Hilsa - 1 kg</h3>
+                    <div class="price">1200.00৳</div>
+                    <input type="number" value="1" min="1">
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="tilapia.jpg" alt="Tilapia">
+                    <h3>Tilapia - 500 gm</h3>
+                    <div class="price">150.00৳</div>
+                    <input type="number" value="1" min="1">
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Meat Section -->
+        <div class="category-section">
+            <div class="category-header">
+                <div>
+                    <img src="meat.jpg" alt="Meat Basket">
+                    <h2>Meat</h2>
+                </div>
+                <a href="meat.html" class="view-more">View More</a>
+            </div>
+            <div class="product-grid">
+                <div class="product-item">
+                    <img src="chicken-breast.jpg" alt="Chicken Breast">
+                    <h3>Chicken Breast - 1 kg</h3>
+                    <div class="price">250.00৳</div>
+                    <input type="number" value="1" min="1">
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="beef-chuck.jpg" alt="Beef Chuck">
+                    <h3>Beef Chuck - 1 kg</h3>
+                    <div class="price">550.00৳</div>
+                    <input type="number" value="1" min="1">
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Us Section -->
+        <section id="about-us" class="about-us">
+            <h2>About Us</h2>
+            <img src="about.jpg" alt="About Us Image" class="about-image">
+            <p>We provide the freshest and highest quality grocery products to our valued customers. Our mission is to make your shopping experience convenient and enjoyable.</p>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-item">
+                    <img src="deliv.jpg" alt="Delivery Service" class="service-icon">
+                    <h3>Fast Delivery</h3>
+                    <p>Get your groceries delivered to your doorstep quickly and efficiently.</p>
+                </div>
+                <div class="service-item">
+                    <img src="hp.png" alt="High-Quality Products" class="service-icon">
+                    <h3>Quality Assurance</h3>
+                    <p>We ensure all our products meet the highest quality standards.</p>
+                </div>
+                <div class="service-item">
+                    <img src="hpw.png" alt="Secure Payment" class="service-icon">
+                    <h3>Secure Payment</h3>
+                    <p>Enjoy safe and secure payment options for all your purchases.</p>
+                </div>
+                <div class="service-item">
+                    <img src="uf.png" alt="Customer Support" class="service-icon">
+                    <h3>24/7 Support</h3>
+                    <p>Our customer support team is available around the clock to assist you.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="portfolio">
+            <h2>Our Portfolio</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="chacha.jpg" alt="Chacha's Pick">
+                    <h3>Chacha's Pick</h3>
+                </div>
+                <div class="portfolio-item">
+                    <img src="khala.jpg" alt="Khala's Choice">
+                    <h3>Khala's Choice</h3>
+                </div>
+                <div class="portfolio-item">
+                    <img src="mach.jpg" alt="Bhai-Bhabi Special">
+                    <h3>Special catch</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Us Section -->
+        <section id="contact" class="contact">
+            <h2>Contact Us</h2>
+            <div class="contact-form">
+                <form action="#" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required aria-required="true">
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required aria-required="true">
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; TatKa by Hadika Henna.</p>
+    </footer>
+
+    <!-- Link to External JavaScript -->
+    <script src="script.js"></script>
+    <script src="search.js"></script>
+
+</body>
+</html>
+

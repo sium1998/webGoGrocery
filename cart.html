@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Grocery Store</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer>
+        // Retrieve cart data from localStorage
+        let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+
+        function displayCart() {
+            const cartContainer = document.getElementById("cart-items");
+            const subtotalElement = document.getElementById("subtotal");
+            const totalElement = document.getElementById("total");
+
+            cartContainer.innerHTML = ""; // Clear previous items
+            let subtotal = 0;
+
+            if (cartItems.length === 0) {
+                document.getElementById("empty-cart-message").style.display = "block";
+                document.getElementById("cart-totals").style.display = "none";
+            } else {
+                document.getElementById("empty-cart-message").style.display = "none";
+                document.getElementById("cart-totals").style.display = "block";
+
+                cartItems.forEach((item, index) => {
+                    const itemTotal = item.quantity * item.price;
+                    subtotal += itemTotal;
+
+                    const itemElement = document.createElement("div");
+                    itemElement.classList.add("cart-item");
+                    itemElement.innerHTML = `
+                        <p><strong>${item.name}</strong></p>
+                        <p>Quantity: ${item.quantity}</p>
+                        <p>Price: ৳${item.price}</p>
+                        <p>Total: ৳${itemTotal}</p>
+                        <button onclick="removeItem(${index})" class="remove-btn">Remove</button>
+                    `;
+                    cartContainer.appendChild(itemElement);
+                });
+
+                subtotalElement.textContent = `৳${subtotal.toFixed(2)}`;
+                totalElement.textContent = `৳${(subtotal * 1.05).toFixed(2)}`; // Adding 5% tax
+            }
+        }
+
+        // Function to remove an item from the cart
+        function removeItem(index) {
+            cartItems.splice(index, 1); // Remove item by index
+            localStorage.setItem("cart", JSON.stringify(cartItems)); // Update localStorage
+            displayCart(); // Re-render the cart
+        }
+
+        // Function to send cart data on form submission
+        function sendCartData() {
+            const cartInput = document.getElementById("cart-data");
+            const totalInput = document.getElementById("total-amount");
+
+            const subtotal = cartItems.reduce((sum, item) => sum + item.quantity * item.price, 0);
+            const total = subtotal * 1.05; // Adding 5% tax
+
+            cartInput.value = JSON.stringify(cartItems); // Send cart as JSON
+            totalInput.value = total.toFixed(2);
+
+            // Clear the cart after confirming the order
+            clearCart();
+        }
+
+        // Function to clear the cart completely
+        function clearCart() {
+            cartItems = [];
+            localStorage.removeItem("cart");
+            displayCart();
+        }
+
+        // Display the cart when the page loads
+        window.onload = displayCart;
+    </script>
+    <style>
+        .cart-item {
+            border-bottom: 1px solid #ccc;
+            padding: 10px;
+        }
+        .remove-btn {
+            color: white;
+            background-color: red;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .remove-btn:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo.png" alt="Grocery Store Logo">
+                </a>
+            </div>
+            <nav>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="account.php">My Account</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="cart">
+            <h1>Your Shopping Cart</h1>
+
+            <!-- Cart Items Section -->
+            <div id="cart-items" class="cart-items"></div>
+            <p id="empty-cart-message" style="display: none;">Your cart is currently empty.</p>
+
+            <!-- Cart Totals and Action Buttons -->
+            <div id="cart-totals" class="cart-totals" style="display: none;">
+                <div class="subtotal">
+                    <span>Subtotal:</span>
+                    <span id="subtotal">৳ 0.00</span>
+                </div>
+                <div class="total">
+                    <span>Total (incl. tax):</span>
+                    <span id="total">৳ 0.00</span>
+                </div>
+                <div class="actions">
+                    <a href="index.html">
+                        <button class="add-more">Add More to Cart</button>
+                    </a>
+                    <!-- Form to submit cart data -->
+                    <form action="order_confirm.php" method="POST" onsubmit="sendCartData()">
+                        <input type="hidden" name="cart" id="cart-data">
+                        <input type="hidden" name="total_amount" id="total-amount">
+                        <button type="submit" style="color: white; background-color: green; border: none; padding: 10px 20px; font-size: 16px; cursor: pointer; border-radius: 5px;">
+                            Confirm Order
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Clear Cart Button -->
+            <button id="clear-cart" class="clear-cart" onclick="clearCart()">Clear Cart</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Grocery Store. All rights reserved.</p>
+    </footer>
+</body>
+</html>
